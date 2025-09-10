@@ -25,4 +25,11 @@ public class SignUpBookTest {
         //assertion fails, add your name to names.json
         Assertions.assertTrue(registry.isRegistered(expected));
     }
+
+    @Test
+    public void sign_up_steve_fraser() throws IOException {
+        String expected = "Steve Fraser";
+        //assertion fails, add your name to names.json
+        Assertions.assertTrue(registry.isRegistered(expected));
+    }
 }
