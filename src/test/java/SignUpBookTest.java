@@ -11,6 +11,7 @@ public class SignUpBookTest {
     static void initAll() {
         registry = new SignUpBook(new JsonNameRepository());
     }
+
     @Test
     public void sign_up_billie_holiday() throws IOException {
         String expected = "Billie Holiday";
@@ -24,5 +25,4 @@ public class SignUpBookTest {
         //assertion fails, add your name to names.json
         Assertions.assertTrue(registry.isRegistered(expected));
     }
-
 }
