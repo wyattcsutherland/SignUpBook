@@ -1,0 +1,35 @@
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IntelliJ patch files
+*.orig
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local Gradle config
+gradle-app.setting
+gradle-app.properties
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+### Logs ###
+*.log
+
+### OS-specific junk ###
+.DS_Store
+Thumbs.db
+
+### Other ###
+out/
