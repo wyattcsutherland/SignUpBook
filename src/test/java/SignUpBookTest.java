@@ -12,14 +12,15 @@ public class SignUpBookTest {
         registry = new SignUpBook(new JsonNameRepository());
     }
     @Test
-    public void sign_up_homer_simpson() throws IOException {
-        String expected = "Homer Simpson";
+    public void sign_up_billie_holiday() throws IOException {
+        String expected = "Billie Holiday";
         //assertion fails, add your name to names.json
         Assertions.assertTrue(registry.isRegistered(expected));
     }
+
     @Test
-    public void sign_up_wyatt_sutherland() throws IOException {
-        String expected = "Wyatt Sutherland";
+    public void sign_up_homer_simpson() throws IOException {
+        String expected = "Homer Simpson";
         //assertion fails, add your name to names.json
         Assertions.assertTrue(registry.isRegistered(expected));
     }
