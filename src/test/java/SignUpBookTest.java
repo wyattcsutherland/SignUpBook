@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SignUpBookTest {
     static SignUpBook registry;
@@ -30,24 +29,24 @@ public class SignUpBookTest {
 
 
 
-    /*===========================================
+    /*================================================================================================
         This test ensures that every name listed in signUpNames.json has a corresponding test method
-     ============================================*/
+     =================================================================================================*/
     @Test
     public void every_name_in_json_should_start_with_a_test_first() throws Exception {
         ObjectMapper mapper = new ObjectMapper();
-        List<String> names = mapper.readValue(new File("src/main/resources/signUpNames.json"), new TypeReference<List<String>>() {});
+        List<String> names = mapper.readValue(new File("src/main/resources/signUpNames.json"), new TypeReference<>() {});
 
         List<String> testMethodNames = Arrays.stream(SignUpBookTest.class.getDeclaredMethods())
                 .map(Method::getName)
-                .collect(Collectors.toList());
+                .toList();
 
         List<String> missingTests = names.stream()
                 .filter(name -> {
                     String expectedMethod = name.toLowerCase().replace(" ", "_");
                     return testMethodNames.stream().noneMatch(m -> m.toLowerCase().contains(expectedMethod));
                 })
-                .collect(Collectors.toList());
+                .toList();
 
         Assertions.assertTrue(
                 missingTests.isEmpty(),
