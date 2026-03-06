@@ -8,7 +8,7 @@ import java.util.List;
 
 public class JsonNameRepository implements NameRepository {
     private static final ObjectMapper mapper = new ObjectMapper();
-    private final File file = new File("src/main/resources/names.json");
+    private final File file = new File("src/main/resources/signUpNames.json");
 
     @Override
     public List<String> readNames() throws IOException {

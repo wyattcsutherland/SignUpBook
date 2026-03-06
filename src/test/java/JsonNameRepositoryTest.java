@@ -1,36 +1,32 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.*;
+import java.io.IOException;
 
 public class JsonNameRepositoryTest {
 
-    JsonNameRepository json;
+    static JsonNameRepository json;
 
-    @Disabled
-    @BeforeEach
-    public void setup() {
+    @BeforeAll
+    public static void setup() throws IOException {
         json = new JsonNameRepository();
     }
 
-    @Disabled
-    public void read_names_from_json() throws Exception {
+    @AfterAll
+    public static void cleanUp() throws IOException {
         json.clearNames();
-        Assertions.assertEquals(0, json.readNames().size());
     }
 
-    @Disabled
-    public void add_one_name_to_json() throws Exception {
+    @Test
+    public void add_one_name() throws Exception {
         json.clearNames();
-        json.addName("Billy Holiday");
+        json.addName("Billie Holiday");
         Assertions.assertEquals(1, json.readNames().size());
     }
 
-    @Disabled
-    public void add_two_name_to_json() throws Exception {
+    @Test
+    public void add_two_names() throws Exception {
         json.clearNames();
-        json.addName("Billy Holiday");
-        json.addName("Jesse James");
+        json.addName("Homer Simpson");
+        json.addName("Mark Twain");
         Assertions.assertEquals(2, json.readNames().size());
     }
-
 }
