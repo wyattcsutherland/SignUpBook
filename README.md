@@ -100,7 +100,7 @@ public void homer_simpson() throws IOException {
 }
 ```
 
-**names.json**
+**signUpNames.json**
 ```json
 [
   "Billie Holiday",
