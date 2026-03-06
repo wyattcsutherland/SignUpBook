@@ -85,7 +85,7 @@ No behavior changes—just tidy up if you see duplication.
 - **Wrong file path:** ensure the list lives at `src/main/resources/signUpNames.json`.
 - **JSON syntax:** missing quotes or trailing commas will break loading.
 - **Test method name:** use `<firstname>_<lastname>` to keep things consistent.
-- **Registry wiring:** if `registry` is null, construct it in a `@BeforeEach` using your production class that loads `signUpNames.json`.
+- **Registry wiring:** if `registry` is null, construct it in a `@BeforeEach` or `@BeforeAll` using your production class that loads `signUpNames.json`.
 
 ---
 
