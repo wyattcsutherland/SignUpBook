@@ -26,7 +26,7 @@ You should see one failing test. Make it turn **green**.
 Open `src/test/java/.../SignUpBookTest.java` and add a method named:
 
 ```
-sign_up_<firstname>_<lastname>
+<firstname>_<lastname>()
 ```
 
 **Example (JUnit 5):**
