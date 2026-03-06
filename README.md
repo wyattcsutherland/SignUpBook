@@ -1,10 +1,9 @@
 # SignUpBook — a tiny TDD warm‑up
 
-This project is a 5-minute exercise to show that **TDD is simple and quick** when done in small steps:
+This project is a 5-10 minute exercise to show that **TDD is simple and quick** when done in small steps:
 
-1) Start with all tests **green**.  
-2) Write **one failing test** that checks your name is registered.  
-3) Make it **green** by adding your name to a JSON file.
+1) Start with **one failing test** that checks your name is registered.  
+2) Make it **green** by adding your name to a JSON file.
 
 ---
 
@@ -17,7 +16,7 @@ From the project root:
 ```bash
 ./gradlew -q test    # or: gradle -q test
 ```
-You should see all tests **green** before you add your own.
+You should see one failing test. Make it turn **green**.
 
 ---
 
