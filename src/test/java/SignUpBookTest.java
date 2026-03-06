@@ -29,9 +29,13 @@ public class SignUpBookTest {
 
 
 
-    /*================================================================================================
-        This test ensures that every name listed in signUpNames.json has a corresponding test method
-     =================================================================================================*/
+
+
+
+    
+    /*===================================================================================
+        ensure every name listed in signUpNames.json has a corresponding test method
+     ====================================================================================*/
     @Test
     public void every_name_in_json_should_start_with_a_test_first() throws Exception {
         ObjectMapper mapper = new ObjectMapper();
