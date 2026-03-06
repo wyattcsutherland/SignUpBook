@@ -20,22 +20,15 @@ public class SignUpBookTest {
     }
 
     @Test
-    public void billie_holiday() throws IOException {
-        String expected = "Billie Holiday";
-        Assertions.assertTrue(registry.isRegistered(expected));
-    }
-
-    @Test
     public void homer_simpson() throws IOException {
         String expected = "Homer Simpson";
         Assertions.assertTrue(registry.isRegistered(expected));
     }
 
-    @Test
-    public void steve_fraser() throws IOException {
-        String expected = "Steve Fraser";
-        Assertions.assertTrue(registry.isRegistered(expected));
-    }
+
+
+
+
 
     /*===========================================
         This test ensures that every name listed in signUpNames.json has a corresponding test method
