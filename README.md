@@ -38,13 +38,9 @@ import java.io.IOException;
 
 class SignUpBookTest {
 
-    // Assume there is a NameRegistry 'registry' available in this test
-    // (e.g., constructed in a @BeforeEach or as a field initialized from production code)
-
     @Test
-    public void sign_up_homer_simpson() throws IOException {
+    public void homer_simpson() throws IOException {
         String expected = "Homer Simpson";
-        // This should FAIL at first — don't edit names.json yet
         Assertions.assertTrue(registry.isRegistered(expected));
     }
 }
@@ -55,7 +51,7 @@ class SignUpBookTest {
 ### 2) Make it pass (GREEN)
 Add your name to the JSON file at:
 ```
-src/main/resources/names.json
+src/main/resources/signUpNames.json
 ```
 
 **Format (JSON array of strings):**
@@ -87,10 +83,10 @@ No behavior changes—just tidy up if you see duplication.
 ---
 
 ## Troubleshooting
-- **Wrong file path:** ensure the list lives at `src/main/resources/names.json`.
+- **Wrong file path:** ensure the list lives at `src/main/resources/signUpNames.json`.
 - **JSON syntax:** missing quotes or trailing commas will break loading.
-- **Test method name:** use `sign_up_<firstname>_<lastname>` to keep things consistent.
-- **Registry wiring:** if `registry` is null, construct it in a `@BeforeEach` using your production class that loads `names.json`.
+- **Test method name:** use `<firstname>_<lastname>` to keep things consistent.
+- **Registry wiring:** if `registry` is null, construct it in a `@BeforeEach` using your production class that loads `signUpNames.json`.
 
 ---
 
@@ -99,7 +95,7 @@ No behavior changes—just tidy up if you see duplication.
 **Test**
 ```java
 @Test
-public void sign_up_homer_simpson() throws IOException {
+public void homer_simpson() throws IOException {
     String expected = "Homer Simpson";
     Assertions.assertTrue(registry.isRegistered(expected));
 }
